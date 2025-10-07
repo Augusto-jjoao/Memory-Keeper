@@ -1,0 +1,72 @@
+/* src/pages/HomePage.css */
+
+.homepage-container {
+  /* Mantemos o Flexbox, ele é a chave para o layout */
+  display: flex;
+  justify-content: center; /* Centraliza o grupo de itens */
+  align-items: center;     /* Alinha verticalmente no centro */
+
+  min-height: calc(100vh - 120px);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.homepage-frase {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #f0f0f0;
+  line-height: 1.3;
+
+  /* Faz a frase ocupar o espaço principal entre as imagens */
+  flex-grow: 1;
+  max-width: 600px; /* Limita a largura do texto para não ficar muito extenso */
+  padding: 0 2rem; /* Adiciona um respiro para não colar nas imagens */
+}
+
+.homepage-imagem-decorativa {
+  /* REMOVEMOS o position: absolute. Agora as imagens fazem parte do fluxo. */
+
+  max-height: 300px; /* Controla a altura máxima da imagem */
+  width: auto;
+  object-fit: contain;
+
+  /* Impede que a imagem encolha se o espaço for pequeno */
+  flex-shrink: 0;
+
+  opacity: 0; /* Começa invisível para a animação */
+  filter: grayscale(15%);
+}
+
+.homepage-imagem-decorativa.esquerda {
+  transform: rotate(-15deg);
+}
+
+.homepage-imagem-decorativa.direita {
+  transform: rotate(15deg);
+}
+
+/* Animação de entrada mais simples, baseada em opacidade e escala */
+.homepage-container.loaded .homepage-imagem-decorativa {
+    animation: fadeIn 1s forwards ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        /* Mantém a rotação final de cada imagem */
+        transform: scale(1) rotate(var(--final-rotate));
+    }
+}
+
+/* Usamos variáveis CSS para manter a rotação final de cada imagem na animação */
+.homepage-imagem-decorativa.esquerda {
+    --final-rotate: -15deg;
+}
+
+.homepage-imagem-decorativa.direita {
+    --final-rotate: 15deg;
+}

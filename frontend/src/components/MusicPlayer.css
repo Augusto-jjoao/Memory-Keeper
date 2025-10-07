@@ -1,0 +1,83 @@
+/* src/components/MusicPlayer.css */
+
+.music-player {
+  display: flex;
+  align-items: center;
+  color: #f0f0f0;
+}
+
+.track-info {
+  /* --- AJUSTE DE LAYOUT --- */
+  max-width: 120px; /* Reduzimos um pouco o tamanho máximo para garantir espaço */
+  min-width: 0; /* Um truque de Flexbox para evitar que o conteúdo "empurre" os outros itens */
+
+  /* --- PREPARAÇÃO PARA ANIMAÇÃO --- */
+  white-space: nowrap; /* Garante que o texto fique em uma única linha */
+  overflow: hidden; /* Esconde o texto que transborda para fora do container */
+
+  cursor: pointer; /* Indica que é um elemento interativo (para o hover) */
+  margin-right: 1rem;
+}
+
+.track-info p {
+  margin: 0;
+  font-size: 0.8rem;
+
+  /* --- ANIMAÇÃO MARQUEE --- */
+  display: inline-block; /* Essencial para a animação 'transform' funcionar corretamente */
+  padding-left: 100%; /* Truque para a animação começar com o texto fora da tela, criando um loop suave */
+  animation: scroll-text-stop 15s linear infinite; /* A animação fica "pausada" por padrão */
+  animation-play-state: paused; /* Estado inicial da animação */
+}
+
+/* Quando o mouse está sobre o container, a animação é ativada */
+.track-info p {
+  margin: 0;
+  font-size: 0.8rem;
+
+  display: inline-block;
+  padding-left: 100%;
+  /* Apenas a animação rodando por padrão */
+  animation: scroll-text-stop 8s linear infinite;
+}
+
+/* Definição da nossa animação de rolagem de texto */
+@keyframes scroll-text-stop {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* --- CONTROLES (sem muitas mudanças) --- */
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.play-pause-btn, .mute-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+}
+
+.volume-slider {
+  -webkit-appearance: none;
+  width: 70px;
+  height: 4px;
+  background: #a7c7e7;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+.volume-slider:hover {
+  opacity: 1;
+}

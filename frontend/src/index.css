@@ -1,0 +1,20 @@
+/* src/index.css */
+
+/* Aqui definimos os padrões para todo o corpo da página */
+body {
+  margin: 0;
+  font-family: 'Times New Roman', Times, serif; /* <<< A FONTE PADRÃO PARA TUDO */
+
+  /* Também é uma boa prática definir as cores de fundo e texto aqui */
+  background-color: #1a1a1a;
+  color: #f0f0f0; /* Uma cor de texto padrão clara para um bom contraste */
+
+  /* Melhora a renderização das fontes */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Removemos a decoração de texto de todos os links por padrão */
+a {
+  text-decoration: none;
+}

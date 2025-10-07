@@ -1,0 +1,50 @@
+/* src/components/Navbar.css */
+
+/* src/components/Navbar.css */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  /* justify-content: space-between; */ /* <-- REMOVA OU COMENTE ESTA LINHA */
+  align-items: center;
+  padding: 1rem 2rem;
+
+  background-color: #001f3f;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* NOVA REGRA PARA O ESPAÇADOR */
+.navbar-spacer {
+  flex-grow: 1; /* Esta é a mágica: diz ao elemento para crescer e ocupar todo o espaço livre */
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: #f0f0f0;
+  font-size: 1.1rem;
+  text-decoration: none;
+
+  /* Mudamos de margin para padding para melhor controle */
+  padding: 0.5rem 1rem;
+
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link.active {
+  color: white;
+  font-weight: bold;
+  border-bottom-color: #a7c7e7;
+}

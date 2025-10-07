@@ -1,0 +1,13 @@
+/* src/components/Footer.css */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+  background-color: #001a33; /* Um azul um pouco mais escuro */
+  color: #a7c7e7;
+  border-top: 1px solid #003366;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+}

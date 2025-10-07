@@ -1,0 +1,75 @@
+/* src/components/GaleriaFotos.css */
+
+.galeria-container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* --- ESTILOS DO BOTÃO QUE FORAM PERDIDOS --- */
+.botao-voltar {
+  background: none;
+  border: 1px solid #a7c7e7;
+  color: #a7c7e7;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif; /* Garante a fonte correta */
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.botao-voltar:hover {
+  background-color: #a7c7e7;
+  color: #001f3f; /* Azul marinho */
+}
+/* --- FIM DOS ESTILOS DO BOTÃO --- */
+
+.galeria-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.galeria-descricao {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-wrapper {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.carousel .slide img {
+  max-height: 600px;
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* --- ESTILOS PARA OS NOSSOS PONTOS CUSTOMIZADOS --- */
+.custom-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.custom-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #a7c7e7;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.custom-dot.active {
+  opacity: 1;
+  transform: scale(1.2);
+}

@@ -1,0 +1,26 @@
+/* src/App.css */
+
+#root {
+  width: 100%;
+
+  /* --- NOVAS REGRAS PARA O LAYOUT --- */
+  display: flex; /* 1. Transforma o container principal em um flex container. */
+  flex-direction: column; /* 2. Organiza os filhos (main, footer) em uma coluna vertical. */
+  min-height: 100vh; /* 3. Garante que o container tenha, no mínimo, a altura total da tela (Viewport Height). */
+}
+
+main {
+  padding-top: 70px;
+
+  /* --- NOVAS REGRAS PARA O CONTEÚDO --- */
+  flex: 1; /* 4. Diz ao conteúdo principal para "crescer" e ocupar todo o espaço vertical disponível, empurrando o rodapé para baixo. */
+
+  /* Mantemos a centralização que já tínhamos feito */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 4rem;
+}
