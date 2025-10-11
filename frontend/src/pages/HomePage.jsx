@@ -22,7 +22,7 @@ function getMensagemEspecial() {
 
   // Dia 10 de Outubro - Nosso Aniversário
   if (dia === 10 && mes === 10) {
-    const anoQueNosConhecemos = 2023; // IMPORTANTE: Mude se o ano for diferente!
+    const anoQueNosConhecemos = 2024;
     const anosDeNamoro = anoAtual - anoQueNosConhecemos;
     return `Feliz ${anosDeNamoro} ano${anosDeNamoro > 1 ? 's' : ''}, meu amor! Te amo.`;
   }
